@@ -36,8 +36,10 @@
     .container .txt {
       max-width: 60%;
       position: relative;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
+      
     }
     .container:nth-child(1) {
       background: url('./images/bg-header-desktop.png');
@@ -45,8 +47,8 @@
       background-repeat: no-repeat;
       
     }
-    .container:nth-child(1) .title {
-      margin-top: 50px;
+    .container.first .title {
+      margin-top: 150px;
       font-size: 45px;
     }
     .container .title {
@@ -55,6 +57,13 @@
     }
     .container .undertxt {
       font-weight: 400;
+    }
+    .title {
+      color: #222;
+    }
+    .undertxt {
+      color: grey;
+      line-height: 150%;
     }
     .downloadbtn button {
       padding: 20px;
@@ -76,6 +85,14 @@
     .downloadbtn .mac {
       background-color: var(--lightblue);
       box-shadow: 0 4px var(--darkgrayblue);
+    }
+    .downloadbtn .ios:hover {
+      box-shadow: 0 1px teal;
+      transform: translateY(2px);
+    }
+    .downloadbtn .mac:hover {
+      box-shadow: 0 1px var(--darkgrayblue);
+      transform: translateY(2px);
     }
     .image {
       display: flex;
@@ -106,13 +123,14 @@
       width: 30%;
       flex-wrap: wrap;
       left: 50%;
+      
     }
     .image .txtbox .title {
       padding: 0;
-      margin-top: 0px;
+      margin-top: 30px;
     }
     .image .txtbox .undertxt {
-      margin-top: -20px;
+      margin-top: -10px;
       font-weight: 400;
     }
 
@@ -276,7 +294,7 @@
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="container first">
     <img src="images/logo.svg"/>
     <div class="txt">
       <h1 class="title">A history of everything you copy</h1>
@@ -313,9 +331,6 @@
       <h1 class="title">Complete History</h1>
       <h3 class="undertxt">Retrieve any snippets from the first moment you started using the app.</h3>
     </div>
-    
-    
-    
   </div>
   
   <div class="container">
